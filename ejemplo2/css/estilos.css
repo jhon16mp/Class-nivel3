@@ -1,0 +1,201 @@
+
+body{
+    margin: 0;
+}
+
+/*HEADER*/
+header{
+    height: 70px;
+    background-color: #E60012;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+header > img{
+    width: 96px;
+    height: 68px;
+    margin-left: 15px;
+}
+nav{
+    float: right;
+}
+nav ul{
+    margin: 0;
+    display: flex;
+}
+nav ul a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    list-style: none;
+    text-decoration: none;
+    height: 70px;
+    width: 70px;
+}
+nav ul a .material-icons{
+    font-size: 32px;
+}
+nav ul a li{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.text-nav-a{
+    margin: 0;
+    font-size: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/*ASIDE*/
+aside{
+    background-color: #E60012;
+    width: 88px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 68px;
+}
+aside button{
+    display: block;
+    background: rgb(248, 2, 23);
+    color: white;
+    width: 72px;
+    box-sizing: content-box;
+    height: 72px;
+    padding: 8px;
+    border-top: solid 0.5px rgb(219, 217, 217);
+    border-bottom-style: none;
+    border-left-style: none;
+    border-right-style: none;
+}
+button :first-child{
+    width: 32px;
+    height: 32px;
+}
+button p{
+    margin: 0;
+    font-size: 10px;
+}
+
+/*MAIN - CONTENEDOR PRINCIPAL*/
+main{
+    width: 95%;
+    height: 100vh;
+    position: relative;
+    top: 70px;
+    left: 88px;
+    display: flex;
+    background-color: rgb(173, 173, 173);
+}
+.container-fluid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* padding-top: 40px; */
+    padding-left: 20px;
+    align-content: space-around;
+}
+.container-fluid > div{
+    height: 218px;
+    border-radius: 25px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    margin-right: 0.5em
+}
+.container-fluid div:nth-child(1){
+    background-image: url(https://cdn02.nintendo-europe.com/media/images/10_share_images/others_3/nintendo_eshop_5/H2x1_NintendoeShopSale_BlockbusterSale2021_esES_image800w.jpg);
+    flex: 0 1 49%;
+}
+.container-fluid div:nth-child(2){
+    background-image: url(https://cdn02.nintendo-europe.com/media/images/10_share_images/others_3/nintendo_direct_3/H2x1_NintendoDirect_24-09-2021_nlNL_esES_image800w.jpg);
+    flex: 0 1 49%;
+}
+.container-fluid div:nth-child(3){
+    background-image: url(https://cdn02.nintendo-europe.com/media/images/11_square_images/country_support_6/es_19/SQ_MPSS_Preventa_image600w.jpg);
+    flex: 0 1 32.3%;
+}
+.container-fluid div:nth-child(4){
+    background-image: url(https://cdn02.nintendo-europe.com/media/images/11_square_images/games_18/nintendo_switch_5/SQ_NSwitch_Splatoon3_image950w.jpg);
+    flex: 0 1 32.3%;
+}
+.container-fluid div:nth-child(5){
+    background-image: url(https://cdn02.nintendo-europe.com/media/images/11_square_images/games_18/nintendo_switch_5/SQ_NSwitch_Bayonetta3_image600w.jpg);
+    flex: 0 1 32.3%;
+}
+.container-fluid div:nth-child(6){
+    background-image: url(https://cdn02.nintendo-europe.com/media/images/11_square_images/systems_12/nintendo_switch/SQ_NSwitch_NSOExpansionPack_Combo_esES_image950w.jpg);
+    flex: 0 1 49%;
+}
+.container-fluid div:nth-child(7){
+    background-image: url(https://cdn02.nintendo-europe.com/media/images/11_square_images/others_4/nintendo_eshop_6/SQ_WeeklyDownloadNews_esES_image950w.jpg);
+    flex: 0 1 49%;
+}
+
+.container-news{
+    /* Valores por defecto del contenedor padre flexible */
+    /* display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    width: 37%; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: space-around;
+    width: 37%;
+    /* height: 300px; */
+}
+.container-news div:first-child{
+    height: 58px;
+    display: flex;
+    /* align-items: center; */
+    padding-left: 5%;
+    background-color: white;
+    width: 100%;
+}
+.container-news article{
+    display: flex;
+}
+.container-news article{
+    display: flex;
+    flex-direction: column;
+}
+.container-news article img{
+    height: 104px;
+    width: 104px;
+}
+@media screen and (max-width: 768px) {
+    nav ul a{
+        width: 35px;
+    }
+    header > img{
+        width: 76px;
+        height: 68px;
+        margin-left: 15px;
+    }
+    .text-nav-a{
+        display: none;
+    }
+    aside{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 960px){
+    .container-fluid{
+        width: 63%;
+        /* background-color: blue; */
+        /* height: 300px; */
+    }
+}

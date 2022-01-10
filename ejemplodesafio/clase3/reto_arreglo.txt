@@ -1,0 +1,2 @@
+Construir un algoritmo que permita guardar las notas de esta seccion.
+Luego que se muestran las notas con su respectivo nombre.

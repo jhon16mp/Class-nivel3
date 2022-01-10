@@ -1,0 +1,35 @@
+table{
+    padding-left: 10px;
+}
+table td{
+    padding-left: 15px;
+}
+h3{
+    padding-left: 140px;
+    color: orange;
+}
+h1{
+    color: deepskyblue;
+    text-align: center;
+    border-style: solid;
+    border-color: orange;
+}
+body{
+    border-style: solid;
+    border-color: gray;
+    border-radius: 10px;
+}
+
+#tabla2{
+    padding-top: 40px;
+    padding-left: 150px;
+}
+button{
+    position: absolute;
+    left: 50%;
+    top: 45%;
+}
+#ter{
+    position: relative;
+    left: 80%;
+}

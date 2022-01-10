@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>SISTEMA DE FACTURACION</h1>
+    <h2>Datos del cliente</h2>
+    <form name="form1">
+        Nombre <input type="text" name="nombre"/><br>
+        RIF <input type="text"  name="rif"/><br>
+        Direccion <input type="text"  name="direc"/><br>
+        <h2>Datos del articulo</h2>
+        Articulo <input type="text"  name="artic"/><br>
+        Precio <input type="text"  name="precio"/><br>
+        Cantidad <input type="text"  name="cant"/><br>
+    </form>
+    <button id="agrega">Agregar</button>
+    <h3>---FACTURA---</h3>
+    <table id="datas">
+        <tr>
+            <td><strong>Producto</strong></td>
+            <td><strong> Precio</strong></td>
+            <td><strong>Cantidad</strong></td>
+            <td><strong>Sub total del articulo</strong></td>
+        </tr>
+    </table>
+    <table id="tabla2">
+        <tr >
+            <td><strong>Sub total</strong></td>
+            <td></td>
+        </tr>
+        <tr >
+            <td><strong>IVA 16 % </strong></td>
+            <td></td>
+        </tr>
+        <tr >
+            <td><strong>Monto total</strong></td>
+            <td></td>
+        </tr>
+    </table>
+    <input id="ter" type="button" name="Terminar" value="Terminar" onclick="terminar()"/>
+    <form action="" name="form4">
+        Ingrese el codigo del Producto <br>
+        <input type="text" name="codigo" onkeypress="validarenter(event)"><br><br>
+        <label id="errorcodigo" style="color: red; display:none">El codigo no existe <br><br></label>  
+        Datos del Producto <br>
+        Nombre <br>
+        <input type="text" name="nombre" readonly="readonly"  id=""> <br><br>
+        Precio <br>
+        <input type="text" name="precio" readonly="readonly" id=""> <br><br>
+        <div id="cantidad" style="display: none">
+            Cantidad que desea comprar<br>
+            <input type="text" name="cantidad" onkeyup="subTotal(event)" id=""> <br><br>
+            <label id="errorcantidad" style="color: red; display:none">No hay esta cantidad de este producto, intente con otra. <br><br></label>
+            Sub-total a Pagar <br>
+            <input type="text" name="subtotal" readonly="readonly" id="">
+        </div>
+        <input type="button" value="Agregar"  name="btnAgregar" disabled="disabled">
+        
+    </form>
+    <div id="lista">
+        <h1>Factura</h1>
+        <table width="500" id="tabla1">
+            <tr>
+                <th name="col1">Nombre</th>
+                <th name="col2">Precio</th> 
+                <th name="col3">Cantidad</th>
+            </tr>
+           
+        </table>
+        <form name="form4">
+            <h4>Subtotal</h4>
+            <input type="text" name="subsubtotal" readonly="readonly" id="">
+            <h4>Iva</h4>
+            <input type="text" name="iva" readonly="readonly" id="">
+            <h4>Total</h4>
+            <input type="text" name="total" readonly="readonly" id=""><br><br>
+            <input type="button" value="Facturar"  name="btnFacturar" disabled="disabled">
+        </form>
+</body>
+</html>

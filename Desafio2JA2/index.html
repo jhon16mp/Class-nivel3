@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Datos del Estudiante</h1>
+    <form name="datos">
+        Nombre <input type="text" name="nombre"/>
+        Desafio1 <input type="text"  name="desafio1"/>
+        Desafio2 <input type="text"  name="desafio2"/>
+        Desafio3 <input type="text"  name="desafio3"/>
+        Desafio4 <input type="text"  name="desafio4"/>
+        Examen <input type="text"  name="examen"/>
+        <input type="button" name="Calculo" value="Calcular"/>
+        <input type="button" name="Registro" value="Resgistrar" onclick="registrar()"/>
+      Promedio del Alumno  <input type="text" name="Total">
+      Estado del Alumno  <input type="text" name="Paso">
+    </form>
+    <script src="funciones.js"></script>
+    <script >
+        //Llamamos a la funcion anonima
+        window.onload = function(){
+            //OBJETIVO 3
+            document.datos.Calculo.addEventListener("click",calcular);
+        }
+        function calcular(){
+            let nombre = parseFloat(document.datos.nombre.value);
+            let desafio1 = parseFloat(document.datos.desafio1.value);
+            let desafio2 = parseFloat(document.datos.desafio2.value);
+            let desafio3 = parseFloat(document.datos.desafio3.value);
+            let desafio4 = parseFloat(document.datos.desafio4.value);
+            let examen = parseFloat(document.datos.examen.value);
+            let promedio = Cal(desafio1,desafio2,desafio3,desafio4);
+        //Esto es para chequear que los valores de retorno estan bien
+            console.log(promedio)
+            let resul = estado(promedio,examen);     
+        //Quitamos el boton para registrar una vez
+          document.datos.Calculo.disabled = true;  
+          document.datos.desafio1.disabled = true; 
+          document.datos.desafio2.disabled = true; 
+          document.datos.desafio3.disabled = true; 
+          document.datos.desafio4.disabled = true; 
+          document.datos.examen.disabled = true; 
+          document.datos.nombre.disabled = true; 
+        }
+        //OBJETIVO 4
+            let seccion = 0;
+            let contadorA = 0;
+            let contadorT = 0;
+            let contadorB = 0;
+        function registrar(){
+            let nombre = parseFloat(document.datos.nombre.value);
+            let desafio1 = parseFloat(document.datos.desafio1.value);
+            let desafio2 = parseFloat(document.datos.desafio2.value);
+            let desafio3 = parseFloat(document.datos.desafio3.value);
+            let desafio4 = parseFloat(document.datos.desafio4.value);
+            let examen = parseFloat(document.datos.examen.value);
+            let promedio =(desafio1 + desafio2 + desafio3 + desafio4)/4
+            contadorT = contadorT +1;
+            //ESTO PARA CHEQUEAR QUE ESTA DANDO LOS RESULTADOS
+            console.log("EL pro de registro ",promedio)
+            console.log("EL exa de registro ",examen)
+           
+            if(promedio < 80 && examen < 80)
+                {contadorB = contadorB +1;}
+    
+            if(promedio >= 80 && examen >= 80)
+                {contadorA = contadorA +1;}
+
+                seccion = seccion + promedio;
+                let pres = seccion/contadorT;
+
+            let resultadoA = document.getElementById("APROBO")
+            resultadoA.innerText = contadorA;
+            let resultadoB = document.getElementById("REPROBO")
+            resultadoB.innerText = contadorB;
+            let resultadoC = document.getElementById("seccion")
+            resultadoC.innerText = pres;
+            //ESTO PARA CHEQUEAR QUE ESTA DANDO LOS RESULTADOS
+            console.log("EL numer de Aprobados es ",contadorA)
+            console.log("EL numer de Reprobados es ",contadorB)
+            console.log("EL numer de promedio seccion es ",pres)
+
+            //SE ACTIVA TODO DE CERO
+            document.datos.Calculo.disabled = false; 
+            document.datos.desafio1.disabled = false; 
+            document.datos.desafio2.disabled = false; 
+            document.datos.desafio3.disabled = false; 
+            document.datos.desafio4.disabled = false; 
+            document.datos.examen.disabled = false; 
+            document.datos.nombre.disabled = false; 
+            //OBJETIVO 5
+            document.datos.reset();
+        }
+        
+    </script>
+    <!--OBJETIVO 4-->
+    <div >Cantidad de estudiantes APROBADOS <span id="APROBO">0</span></div>
+    <div >Cantidad de estudiantes REPROBADOS <span id="REPROBO">0</span></div>
+    <div >Promedio de la seccion <span id="seccion">0</span></div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+document.datos.btnRegistrar.onclick=()=>{
+        if (document.datos.pais.selectedIndex==-1)
+            alert("Debe seleccionar el pais")
+        else
+            if (numeroCheckMarcados("idioma")==0)
+                alert("Debe seleccionar al menos un idioma")
+            else{
+                alert("Ud vide en "+document.datos.pais.value)
+            }
+    } 
+Jose Luis Rojas Dellan says:function numeroCheckMarcados(nombre){
+    let n=0;
+    let inputs=document.getElementsByName(nombre)
+    for (let i=0;i<inputs.length;i++)
+        if (inputs[i].checked)
+            n++;
+
+    return n;
+} 

@@ -1,0 +1,109 @@
+
+body{
+    margin: 0;
+}
+
+/*HEADER*/
+header{
+    height: 70px;
+    background-color: #E60012;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+header > img{
+    width: 96px;
+    height: 68px;
+    margin-left: 15px;
+}
+nav{
+    float: right;
+}
+nav ul{
+    margin: 0;
+}
+nav ul a{
+    display: inline-block;
+    color: white;
+    list-style: none;
+    text-decoration: none;
+    height: 70px;
+    width: 70px;
+}
+nav ul a .material-icons{
+    font-size: 32px;
+}
+.text-nav-a{
+    margin: 0;
+    font-size: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/*ASIDE*/
+aside{
+    background-color: #E60012;
+    width: 88px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 68px;
+}
+aside button{
+    display: block;
+    background: rgb(248, 2, 23);
+    color: white;
+    width: 72px;
+    box-sizing: content-box;
+    height: 72px;
+    padding: 8px;
+    border-top: solid 0.5px rgb(219, 217, 217);
+    border-bottom-style: none;
+    border-left-style: none;
+    border-right-style: none;
+}
+button :first-child{
+    width: 32px;
+    height: 32px;
+}
+button p{
+    margin: 0;
+    font-size: 10px;
+}
+
+/*MAIN - CONTENEDOR PRINCIPAL*/
+main{
+    width: 100%;
+    height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+    nav ul a{
+        width: 35px;
+    }
+    header > img{
+        width: 76px;
+        height: 68px;
+        margin-left: 15px;
+    }
+    .text-nav-a{
+        display: none;
+    }
+    aside{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 960px){
+    .container-fluid{
+        width: 65%;
+        background-color: blue;
+        height: 300px;
+    }
+    .container-news{
+        width: 35%;
+        background-color: burlywood;
+        height: 300px;
+    }
+}

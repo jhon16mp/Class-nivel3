@@ -1,0 +1,268 @@
+*{
+    margin: 0;
+}
+#s1{
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 280px;
+    
+}
+#loguito{
+    top: 50px;
+    left: 70px;
+    z-index: 2;
+    position:absolute;
+
+}
+h1{
+    top: 80px;
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    left: 50%;
+}
+h5{
+    font-family: 'Questrial', sans-serif;
+    position: absolute;
+    top: 120px;
+    left: 49%;
+}
+ul {
+    list-style-type: none;
+    background-color: brown;
+    z-index: 5;
+    position: absolute;
+    padding-block: 2px;
+    
+  }
+  
+  li {
+    color: white;
+    float: left;
+    margin-right: 5px;
+    padding: 10px 71px;
+    font-size: 15px;
+    line-height: 1.5;
+    
+  }
+.pre1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    line-height: 55px;
+}
+.pre2{
+    font-family: 'Questrial', sans-serif;
+    line-height: 55px;
+}
+.pro1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+.pro{
+    font-family: 'Questrial', sans-serif;
+}
+.pro12{
+    font-family: 'Questrial', sans-serif;
+    line-height: 185px;
+}
+
+#foto{
+    
+    border-radius: 40px ;
+    left: 15px;
+}
+#log1{
+    border-radius: 40px ;
+    left: 15px;
+    top: 260px;
+    position: absolute;
+}
+#log2{
+    border-radius: 40px ;
+    left: 80px;
+    top: 260px;
+    position: absolute;
+}
+#log3{
+    border-radius: 40px ;
+    left: 145px;
+    top: 260px;
+    position: absolute;
+}
+#log4{
+    border-radius: 40px ;
+    left: 210px;
+    top: 260px;
+    position: absolute;
+}
+#log5{
+    border-radius: 55px ;
+    left: 275px;
+    top: 260px;
+    position: absolute;
+}
+#log6{
+    border-radius: 55px ;
+    left: 80px;
+    top: 380px;
+    position: absolute;
+}
+#log7{
+    border-radius: 55px ;
+    left: 145px;
+    top: 380px;
+    position: absolute;
+}
+#log8{
+    border-radius: 55px ;
+    left: 210px;
+    top: 380px;
+    position: absolute;
+}
+  #s3{
+      top: 327px;
+      background-color: rgb(22, 9, 105);
+      color: yellow;
+      position: absolute;
+      height: 610px;
+      width: 400px;
+      text-align: center;
+      line-height: 35px;
+  }
+  #s4{
+    background-color:rgb(22, 9, 105);
+    color: yellow;
+    position: absolute;
+    left: 400px;
+    top: 327px;
+    text-align: center;
+    width: 605px;
+    height: 610px;
+    line-height: 25px;
+}
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 140%;
+    width: 100%;
+}
+@media screen and (max-width: 425px){
+    #s1{
+        background-color: black;
+        color: black;
+        text-align: center;
+        height: 280px;
+        width: 800px;
+        
+        
+    }
+    #loguito{
+        top: 50px;
+        left: 80%;
+        z-index: 2;
+        position:absolute;
+    
+    }
+    h1{
+        font-size: 1px;
+        z-index: 1;
+    }
+    h5{
+        font-size: 1px;
+        z-index: 1;
+    }
+    ul {
+        list-style-type: none;
+        background-color: brown;
+        position:absolute;
+        text-align: center;
+        
+
+        
+      }
+      
+      li {
+        color: white;
+        width: 612px;
+        text-align: center;
+        font-size: 25px;
+      }
+      #s3{
+        top: 560px;
+        background-color: rgb(22, 9, 105);
+        color: yellow;
+        position: absolute;
+        height: 610px;
+        width: 800px;
+        text-align: center;
+        line-height: 35px;
+    }
+    #s4{
+      background-color:rgb(22, 9, 105);
+      color: yellow;
+      top: 1160px;
+      text-align: center;
+      left: 0;
+      width: 800px;
+      height: 610px;
+      line-height: 25px;
+  }
+  #log1{
+    border-radius: 40px ;
+    left: 230px;
+    top: 260px;
+    position: absolute;
+}
+#log2{
+    border-radius: 40px ;
+    left: 295px;
+    top: 260px;
+    position: absolute;
+}
+#log3{
+    border-radius: 40px ;
+    left: 360px;
+    top: 260px;
+    position: absolute;
+}
+#log4{
+    border-radius: 40px ;
+    left: 425px;
+    top: 260px;
+    position: absolute;
+}
+#log5{
+    border-radius: 55px ;
+    left: 490px;
+    top: 260px;
+    position: absolute;
+}
+#log6{
+    border-radius: 55px ;
+    left: 295px;
+    top: 380px;
+    position: absolute;
+}
+#log7{
+    border-radius: 55px ;
+    left: 360px;
+    top: 380px;
+    position: absolute;
+}
+#log8{
+    border-radius: 55px ;
+    left: 425px;
+    top: 380px;
+    position: absolute;
+}
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 210%;
+    width: 188%;
+}
+}
